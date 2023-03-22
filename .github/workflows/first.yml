@@ -2,7 +2,7 @@ name: shell commands
 
 on:
   - push
-  
+
 jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
@@ -15,3 +15,10 @@ jobs:
           df -h
           node -v
           ls -a
+  run-shell-commands:
+    runs-on: windows-latest
+    needs: ["run-shell-commands"]
+    steps:        
+      - name: Directory
+          pwd
+          shell: bash
