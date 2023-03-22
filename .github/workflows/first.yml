@@ -20,5 +20,6 @@ jobs:
     needs: ["run-shell-commands"]
     steps:        
       - name: Directory
-          run: pwd
-          shell: bash
+          run: |
+          pwd
+          df -h
