@@ -15,7 +15,7 @@ jobs:
           df -h
           node -v
           ls -a
-  run-shell-commands:
+  run-windows-commands:
     runs-on: windows-latest
     needs: ["run-shell-commands"]
     steps:        
