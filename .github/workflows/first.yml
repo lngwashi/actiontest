@@ -1,9 +1,7 @@
 name: shell commands
 
 on:
-  pull_request:
-    branches:
-    - main
+    - push
 
 jobs:
   terraform-workflow:
@@ -24,5 +22,7 @@ jobs:
         run: terraform fmt
       - name: Terraform show
         run: terraform show
+      - name: Terraform plan
+        run: terraform plan
       
       
