@@ -1,7 +1,7 @@
 name: shell commands
 
 on:
-    - push
+  - push
 
 jobs:
   terraform-workflow:
@@ -13,11 +13,11 @@ jobs:
       - name: Set Terraform
         uses: hashicorp/setup-terraform@v2
         with:
-           terraform_version: 1.1.9
+          terraform_version: 1.1.9
       - name: On multple lines
         run: |
-           pwd
-           ls -a
+          pwd
+          ls -a
       - name: Terraform init
         run: terraform init
       - name: Terraform validate
@@ -26,6 +26,5 @@ jobs:
         run: terraform fmt
       - name: Terraform show
         run: terraform show
-      
-      
-      
+      - name: Terraform plan
+        run: terraform plan
